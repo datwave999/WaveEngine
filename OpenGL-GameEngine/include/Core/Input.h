@@ -45,6 +45,10 @@ public:
 	static void EndFrame();
 
 private:
+	// Key Counts
+	static constexpr int KEY_COUNT = GLFW_KEY_LAST + 1;
+	static constexpr int MOUSE_BUTTON_COUNT = GLFW_MOUSE_BUTTON_LAST + 1;
+
 	/*
 	KEYBOARD
 	*/
