@@ -3,7 +3,6 @@
 
 Window::Window(int widthInt, int heightInt, const char* title) : width(widthInt), height(heightInt)
 {
-	glfwInit();
 	// OpenGL version 4.6
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
@@ -19,7 +18,6 @@ Window::Window(int widthInt, int heightInt, const char* title) : width(widthInt)
 	window = glfwCreateWindow(width, height, title, NULL, NULL);
 	if (window == nullptr) {
 		std::cout << "Could not create window." << std::endl;
-		glfwTerminate();
 		return;
 	}
 
@@ -32,7 +30,8 @@ Window::Window(int widthInt, int heightInt, const char* title) : width(widthInt)
 	// Initialize GLAD
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
 		std::cout << "Failed to initialize GLAD" << std::endl;
-		glfwTerminate();
+		glfwDestroyWindow(window);
+		window = nullptr;
 		return;
 	}
 
@@ -48,10 +47,6 @@ bool Window::shouldClose() {
 
 void Window::swapBuffers() {
 	glfwSwapBuffers(window);
-}
-
-void Window::pollEvents() {
-	glfwPollEvents();
 }
 
 int Window::getWidth() const {
@@ -85,5 +80,4 @@ Window::~Window() {
 	if (window != nullptr) {
 		glfwDestroyWindow(window);
 	}
-	glfwTerminate();
 }

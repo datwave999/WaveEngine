@@ -4,6 +4,7 @@
 #include <memory>
 #include "Resources/AssetManager.h"
 #include "Core/State.h"
+#include "Core/GlfwRuntime.h"
 
 // Forward Declarations
 class Window;
@@ -37,6 +38,7 @@ private:
     double lastFrameTime;
 
     // --- Core Systems ---
+    GlfwRuntime glfwRuntime;
     std::unique_ptr<Window> window;
     AssetManager assets;
 

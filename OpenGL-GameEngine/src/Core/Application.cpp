@@ -18,6 +18,8 @@ Application::~Application() {
 // --- Initialization ---
 bool Application::Initialize() {
 
+    if (glfwRuntime.Initialize() == false) return false;
+
     // 1. Create Window
     window = std::make_unique<Window>(1920, 1080, "OpenGL Game Engine");
     if (window->getNativeWindow() == nullptr) {
@@ -88,7 +90,7 @@ void Application::Render() {
 // --- Main Engine Loop ---
 void Application::Run() {
     while (!window->shouldClose() && !states.empty()) {
-        window->pollEvents();
+        glfwRuntime.PollEvents();
 
         // 1. Calculate Delta Time 
         double currentFrameTime = glfwGetTime();

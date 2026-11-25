@@ -10,9 +10,11 @@ public:
 	Window(int widthInt, int heightInt, const char* title);
 	~Window();
 
+	Window(const Window&) = delete;
+	Window& operator=(const Window&) = delete;
+
 	bool shouldClose();
 	void swapBuffers();
-	void pollEvents();
 	void processInput();
 
 	// ==== Getters ====
@@ -25,7 +27,7 @@ public:
 	GLFWwindow* getNativeWindow() const { return window; }
 
 private:
-	GLFWwindow* window;
+	GLFWwindow* window = nullptr;
 	int width;
 	int height;
 
