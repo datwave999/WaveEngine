@@ -3,8 +3,10 @@
 #include "Core/Application.h"
 #include "Core/Window.h"
 #include "Core/Camera.h"
-#include "Graphics/Shader.h"
 #include "Core/Input.h"
+#include "ECS/Components/RenderComponent.h"
+#include "ECS/Components/TransformComponent.h"
+#include "ECS/Components/LightComponents.h"
 #include "Resources/StandardMeshes.h"
 #include <cmath>
 #include <iostream>

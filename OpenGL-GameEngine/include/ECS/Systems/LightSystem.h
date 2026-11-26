@@ -1,7 +1,6 @@
 #pragma once
 #include <entt/entt.hpp>
 #include "Graphics/Buffer.h"
-#include "ECS/Components/TransformComponent.h"
 #include "ECS/Components/LightComponents.h"
 #include <memory>
 

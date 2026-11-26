@@ -2,7 +2,6 @@
 #include <glad/glad.h>
 #include <vector>
 #include <cstdint>
-#include <memory>
 #include <glm/glm.hpp>
 
 struct Vertex {

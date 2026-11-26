@@ -1,5 +1,5 @@
 #include "Core/Window.h"
-#include "Core/Input.h"
+#include <iostream>
 
 Window::Window(int widthInt, int heightInt, const char* title) : width(widthInt), height(heightInt)
 {

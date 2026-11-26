@@ -1,9 +1,10 @@
 #pragma once
 
 #include "Core/State.h"
-#include <vector>
 #include <memory>
 #include <cstdint>
+#include <unordered_map>
+#include <string>
 
 #include <entt/entt.hpp>
 #include "ECS/Entity.h"

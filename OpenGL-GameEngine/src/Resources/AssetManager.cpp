@@ -1,7 +1,6 @@
 #include "Resources/AssetManager.h"
 
 #include <iostream>
-#include <stdexcept>
 #include <STB/stb_image.h>
 #include <assimp/Importer.hpp>
 #include <assimp/scene.h>

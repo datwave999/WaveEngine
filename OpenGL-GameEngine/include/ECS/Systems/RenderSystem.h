@@ -1,9 +1,6 @@
 #pragma once
 #include <entt/entt.hpp>
 #include "Resources/AssetManager.h"
-#include "ECS/Components/TransformComponent.h"
-#include "ECS/Components/RenderComponent.h"
-#include "ECS/Components/LightComponents.h"
 
 struct RenderCommand {
     uint32_t shaderHandle;

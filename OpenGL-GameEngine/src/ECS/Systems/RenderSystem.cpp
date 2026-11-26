@@ -1,4 +1,7 @@
 #include "ECS/Systems/RenderSystem.h"
+#include "ECS/Components/TransformComponent.h"
+#include "ECS/Components/RenderComponent.h"
+#include "ECS/Components/LightComponents.h"
 #include "Graphics/Uniform.h"
 #include <algorithm>
 #include <vector>

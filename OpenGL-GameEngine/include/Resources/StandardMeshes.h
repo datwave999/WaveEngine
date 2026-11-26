@@ -1,7 +1,8 @@
 #pragma once
 
 #include "Resources/AssetData.h"
-#include <memory>
+#include <utility>
+#include <vector>
 
 // typedef for the return type
 using MeshData = std::pair<std::vector<Vertex>, std::vector<GLuint>>;

@@ -1,4 +1,5 @@
 #include "Graphics/Buffer.h"
+#include <cstring>
 
 Buffer::Buffer(GLenum type, GLsizeiptr size, const void* data, GLenum drawType) : bufferType(type), bufferSize(size)
 {

@@ -8,7 +8,6 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <vector>
 
 PauseState::PauseState(Application* app) : State(app) {}
 

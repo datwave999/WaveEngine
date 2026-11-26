@@ -1,4 +1,8 @@
 #include "Graphics/Shader.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <glm/gtc/type_ptr.hpp>
 
 static const char* UniformNames[] = {
 	"model",

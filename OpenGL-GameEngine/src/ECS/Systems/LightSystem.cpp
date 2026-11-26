@@ -1,4 +1,5 @@
 #include "ECS/Systems/LightSystem.h"
+#include "ECS/Components/TransformComponent.h"
 #include <algorithm>
 #include <vector>
 
